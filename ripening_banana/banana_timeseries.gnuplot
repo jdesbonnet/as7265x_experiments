@@ -1,3 +1,11 @@
+set title "Reflectance spectrum of ripening banana time series (from pre-ripe to over ripe)\n(Measured with AS7265x sensor triad. Illumination source: UV, white, NIR LED)" 
+
+set xlabel "Time"
+set ylabel "Factory calibrated ADC counts"
+
+set xdata time
+set timefmt "%s"
+
 set grid
 
 datafile="banana_timeseries.dat"
