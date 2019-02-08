@@ -6,8 +6,11 @@ set ylabel "Factory calibrated ADC counts"
 set xdata time
 set timefmt "%s"
 
+set terminal pngcairo size 1200,800
+set output "banana_absolute.png"
 
-use_relative=1
+use_relative=0
+
 
 c0= (use_relative ? 2455.65 : 1)
 c1= (use_relative ?  368.15 : 1)
@@ -56,4 +59,4 @@ plot \
   '' using 1:($37/c16) with linespoints title 'AS72653 E 510nm' linecolor rgb '#00ff00', \
   '' using 1:($38/c17) with linespoints title 'AS72653 F 535nm' linecolor rgb '#5bff00'
 
-pause -1
+#pause -1
